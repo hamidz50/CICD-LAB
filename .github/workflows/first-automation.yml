@@ -1,0 +1,22 @@
+name: My First Workflow
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+
+jobs:
+  hello:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Welcome
+        run: echo "Hello World"
+
+      - name: UTC Date
+        run: date -u
+
+      - name: Linux Runner
+        run: uname -a
+        
+  
